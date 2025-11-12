@@ -47,31 +47,31 @@ public class LightsOnView extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new java.awt.GridLayout(3, 3, 15, 15));
 
-        jBtnGame0.setBackground(new java.awt.Color(204, 204, 204));
+        jBtnGame0.setBackground(new java.awt.Color(51, 255, 51));
         jPanel1.add(jBtnGame0);
 
-        jBtnGame1.setBackground(new java.awt.Color(204, 204, 204));
+        jBtnGame1.setBackground(new java.awt.Color(51, 255, 51));
         jPanel1.add(jBtnGame1);
 
-        jBtnGame2.setBackground(new java.awt.Color(204, 204, 204));
+        jBtnGame2.setBackground(new java.awt.Color(51, 255, 51));
         jPanel1.add(jBtnGame2);
 
-        jBtnGame3.setBackground(new java.awt.Color(204, 204, 204));
+        jBtnGame3.setBackground(new java.awt.Color(51, 255, 51));
         jPanel1.add(jBtnGame3);
 
         jBtnGame4.setBackground(new java.awt.Color(255, 255, 51));
         jPanel1.add(jBtnGame4);
 
-        jBtnGame5.setBackground(new java.awt.Color(204, 204, 204));
+        jBtnGame5.setBackground(new java.awt.Color(51, 255, 51));
         jPanel1.add(jBtnGame5);
 
-        jBtnGame6.setBackground(new java.awt.Color(204, 204, 204));
+        jBtnGame6.setBackground(new java.awt.Color(51, 255, 51));
         jPanel1.add(jBtnGame6);
 
-        jBtnGame7.setBackground(new java.awt.Color(204, 204, 204));
+        jBtnGame7.setBackground(new java.awt.Color(51, 255, 51));
         jPanel1.add(jBtnGame7);
 
-        jBtnGame8.setBackground(new java.awt.Color(204, 204, 204));
+        jBtnGame8.setBackground(new java.awt.Color(51, 255, 51));
         jPanel1.add(jBtnGame8);
 
         jBtnUjra.setText("Újraindítás");

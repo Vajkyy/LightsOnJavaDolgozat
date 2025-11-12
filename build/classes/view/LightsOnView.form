@@ -104,28 +104,28 @@
         <Component class="javax.swing.JButton" name="jBtnGame0">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="cc" green="cc" red="cc" type="rgb"/>
+              <Color blue="33" green="ff" red="33" type="rgb"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jBtnGame1">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="cc" green="cc" red="cc" type="rgb"/>
+              <Color blue="33" green="ff" red="33" type="rgb"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jBtnGame2">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="cc" green="cc" red="cc" type="rgb"/>
+              <Color blue="33" green="ff" red="33" type="rgb"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jBtnGame3">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="cc" green="cc" red="cc" type="rgb"/>
+              <Color blue="33" green="ff" red="33" type="rgb"/>
             </Property>
           </Properties>
         </Component>
@@ -139,28 +139,28 @@
         <Component class="javax.swing.JButton" name="jBtnGame5">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="cc" green="cc" red="cc" type="rgb"/>
+              <Color blue="33" green="ff" red="33" type="rgb"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jBtnGame6">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="cc" green="cc" red="cc" type="rgb"/>
+              <Color blue="33" green="ff" red="33" type="rgb"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jBtnGame7">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="cc" green="cc" red="cc" type="rgb"/>
+              <Color blue="33" green="ff" red="33" type="rgb"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jBtnGame8">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="cc" green="cc" red="cc" type="rgb"/>
+              <Color blue="33" green="ff" red="33" type="rgb"/>
             </Property>
           </Properties>
         </Component>
