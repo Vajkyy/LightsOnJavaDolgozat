@@ -1,5 +1,9 @@
 package view;
 
+import javax.swing.JButton;
+import javax.swing.JMenuItem;
+import javax.swing.JTextField;
+
 public class LightsOnView extends javax.swing.JFrame {
 
     public LightsOnView() {
@@ -153,6 +157,56 @@ public class LightsOnView extends javax.swing.JFrame {
             }
         });
     }
+
+    public JButton getjBtnGame0() {
+        return jBtnGame0;
+    }
+
+    public JButton getjBtnGame1() {
+        return jBtnGame1;
+    }
+
+    public JButton getjBtnGame2() {
+        return jBtnGame2;
+    }
+
+    public JButton getjBtnGame3() {
+        return jBtnGame3;
+    }
+
+    public JButton getjBtnGame4() {
+        return jBtnGame4;
+    }
+
+    public JButton getjBtnGame5() {
+        return jBtnGame5;
+    }
+
+    public JButton getjBtnGame6() {
+        return jBtnGame6;
+    }
+
+    public JButton getjBtnGame8() {
+        return jBtnGame8;
+    }
+
+    public JButton getjBtnUjra() {
+        return jBtnUjra;
+    }
+
+    public JMenuItem getjMnuItemJatekSzabaly() {
+        return jMnuItemJatekSzabaly;
+    }
+
+    public JMenuItem getjMnuItemKilepes() {
+        return jMnuItemKilepes;
+    }
+
+    public JTextField getjTxtFelkapcsLampa() {
+        return jTxtFelkapcsLampa;
+    }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBtnGame0;
