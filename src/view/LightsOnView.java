@@ -17,38 +17,70 @@ public class LightsOnView extends javax.swing.JFrame {
 
         jButton3 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        jButton6 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
+        jBtnGame0 = new javax.swing.JButton();
+        jBtnGame1 = new javax.swing.JButton();
+        jBtnGame2 = new javax.swing.JButton();
+        jBtnGame3 = new javax.swing.JButton();
+        jBtnGame4 = new javax.swing.JButton();
+        jBtnGame5 = new javax.swing.JButton();
+        jBtnGame6 = new javax.swing.JButton();
+        jBtnGame7 = new javax.swing.JButton();
+        jBtnGame8 = new javax.swing.JButton();
+        jBtnUjra = new javax.swing.JButton();
+        jLblFelkapcs = new javax.swing.JLabel();
+        jTxtFelkapcsLampa = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMnuBar = new javax.swing.JMenu();
+        jMnuItemJatekSzabaly = new javax.swing.JMenuItem();
         jMnuItemKilepes = new javax.swing.JMenuItem();
 
         jButton3.setText("jButton3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("LightsOn");
+        setResizable(false);
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new java.awt.GridLayout(3, 3, 15, 15));
-        jPanel1.add(jButton6);
-        jPanel1.add(jButton8);
-        jPanel1.add(jButton7);
-        jPanel1.add(jButton5);
-        jPanel1.add(jButton10);
-        jPanel1.add(jButton1);
-        jPanel1.add(jButton9);
-        jPanel1.add(jButton4);
-        jPanel1.add(jButton2);
 
-        jButton11.setText("Újraindítás");
+        jBtnGame0.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.add(jBtnGame0);
+
+        jBtnGame1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.add(jBtnGame1);
+
+        jBtnGame2.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.add(jBtnGame2);
+
+        jBtnGame3.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.add(jBtnGame3);
+
+        jBtnGame4.setBackground(new java.awt.Color(255, 255, 51));
+        jPanel1.add(jBtnGame4);
+
+        jBtnGame5.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.add(jBtnGame5);
+
+        jBtnGame6.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.add(jBtnGame6);
+
+        jBtnGame7.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.add(jBtnGame7);
+
+        jBtnGame8.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.add(jBtnGame8);
+
+        jBtnUjra.setText("Újraindítás");
+
+        jLblFelkapcs.setText("Felkapcsolt lámpák:");
+
+        jTxtFelkapcsLampa.setEditable(false);
+        jTxtFelkapcsLampa.setText("1");
 
         jMnuBar.setText("Menü");
+
+        jMnuItemJatekSzabaly.setText("Játékszabályzat...");
+        jMnuBar.add(jMnuItemJatekSzabaly);
 
         jMnuItemKilepes.setText("Kilépés");
         jMnuBar.add(jMnuItemKilepes);
@@ -63,19 +95,27 @@ public class LightsOnView extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 824, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLblFelkapcs)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTxtFelkapcsLampa, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jBtnUjra, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton11)
-                .addContainerGap())
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBtnUjra)
+                    .addComponent(jLblFelkapcs)
+                    .addComponent(jTxtFelkapcsLampa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -115,20 +155,23 @@ public class LightsOnView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jBtnGame0;
+    private javax.swing.JButton jBtnGame1;
+    private javax.swing.JButton jBtnGame2;
+    private javax.swing.JButton jBtnGame3;
+    private javax.swing.JButton jBtnGame4;
+    private javax.swing.JButton jBtnGame5;
+    private javax.swing.JButton jBtnGame6;
+    private javax.swing.JButton jBtnGame7;
+    private javax.swing.JButton jBtnGame8;
+    private javax.swing.JButton jBtnUjra;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLblFelkapcs;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMnuBar;
+    private javax.swing.JMenuItem jMnuItemJatekSzabaly;
     private javax.swing.JMenuItem jMnuItemKilepes;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTxtFelkapcsLampa;
     // End of variables declaration//GEN-END:variables
 }
