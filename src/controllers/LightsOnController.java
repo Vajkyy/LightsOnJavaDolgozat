@@ -1,5 +1,135 @@
 package controllers;
 
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JOptionPane;
+import models.LightsOnModel;
+import view.LightsOnView;
+
 public class LightsOnController {
-            
+
+    private LightsOnView nNezet;
+    private LightsOnModel nModel;
+    private JButton[] nGombok = new JButton[9];
+    private int nFelkapcsSzam;
+
+    public LightsOnController(LightsOnView nNezet, LightsOnModel nModel) {
+        this.nNezet = nNezet;
+        this.nModel = nModel;
+        bellit();
+    }
+
+    public void bellit() {
+        nGombok[0] = nNezet.getjBtnGame0();
+        nGombok[1] = nNezet.getjBtnGame1();
+        nGombok[2] = nNezet.getjBtnGame2();
+        nGombok[3] = nNezet.getjBtnGame3();
+        nGombok[4] = nNezet.getjBtnGame4();
+        nGombok[5] = nNezet.getjBtnGame5();
+        nGombok[6] = nNezet.getjBtnGame6();
+        nGombok[7] = nNezet.getjBtnGame7();
+        nGombok[8] = nNezet.getjBtnGame8();
+
+        for (int i = 0; i < nGombok.length; i++) {
+            nGombok[i].setBackground(nModel.getSzin(i));
+        }
+
+        nFelkapcsSzam = kezdetiSzamolas();
+        nNezet.getjTxtFelkapcsLampa().setText(String.valueOf(nFelkapcsSzam));
+
+        for (int nIndex = 0; nIndex < nGombok.length; nIndex++) {
+            int nPozicio = nIndex;
+            nGombok[nIndex].addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    kapcsol(nPozicio);
+                    frissitFelkapcsSzam();
+                    ellenorizGyozelem();
+                }
+            });
+        }
+
+        nNezet.getjBtnUjra().addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                ujraindit();
+            }
+        });
+        nNezet.getjMnuItemKilepes().addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                kilepesMegerosites();
+            }
+        });
+
+        nNezet.getjMnuItemJatekSzabaly().addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(null,
+                        "A cél: minden lámpát lekapcsolni (sárgára váltani).\n"
+                        + "Egy gombra kattintva az a lámpa és a szomszédosak színe megváltozik.\n"
+                        + "Felkapcsolt: zöld\nKikapcsolt: sárga");
+            }
+        });
+        nNezet.addWindowListener(new java.awt.event.WindowAdapter() {
+            @Override
+            public void windowClosing(java.awt.event.WindowEvent e) {
+                kilepesMegerosites();
+            }
+        });
+
+    }
+
+    private void kapcsol(int nPozicio) {
+        nModel.kapcsol(nPozicio);
+        for (int i = 0; i < nGombok.length; i++) {
+            nGombok[i].setBackground(nModel.getSzin(i));
+        }
+    }
+
+    private void frissitFelkapcsSzam() {
+        nFelkapcsSzam = 0;
+        for (int i = 0; i < nGombok.length; i++) {
+            if (nGombok[i].getBackground().equals(Color.GREEN)) {
+                nFelkapcsSzam++;
+            }
+        }
+        nNezet.getjTxtFelkapcsLampa().setText(String.valueOf(nFelkapcsSzam));
+    }
+
+    private int kezdetiSzamolas() {
+        int nSzamlalo = 0;
+        for (int i = 0; i < nGombok.length; i++) {
+            if (nGombok[i].getBackground().equals(Color.GREEN)) {
+                nSzamlalo++;
+            }
+        }
+        return nSzamlalo;
+    }
+
+    private void ujraindit() {
+        nModel.ujraindit();
+        for (int i = 0; i < nGombok.length; i++) {
+            nGombok[i].setBackground(nModel.getSzin(i));
+        }
+        frissitFelkapcsSzam();
+    }
+
+    private void ellenorizGyozelem() {
+        if (nModel.mindenSarga()) {
+            JOptionPane.showMessageDialog(null, "Gratulálok! Minden lámpa lekapcsolva!");
+        }
+    }
+
+    private void kilepesMegerosites() {
+        int valasz = JOptionPane.showConfirmDialog(
+                nNezet,
+                "Biztosan ki szeretnél lépni a programból?",
+                "Kilépés megerősítése",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE
+        );
+
+        if (valasz == JOptionPane.YES_OPTION) {
+            System.exit(0);
+        }
+    }
 }
