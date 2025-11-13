@@ -57,14 +57,18 @@
           <Group type="102" attributes="0">
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Component id="jPanel1" min="-2" pref="535" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
                       <Component id="jLblFelkapcs" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jTxtFelkapcsLampa" min="-2" pref="30" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jBtnUjra" min="-2" pref="140" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jBtnBetoltes" pref="140" max="32767" attributes="0"/>
+                          <Component id="jBtnMentes" max="32767" attributes="0"/>
+                          <Component id="jBtnUjra" pref="140" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
-                  <Component id="jPanel1" min="-2" pref="535" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -81,7 +85,11 @@
                   <Component id="jLblFelkapcs" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jTxtFelkapcsLampa" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jBtnMentes" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jBtnBetoltes" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="7" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -180,6 +188,16 @@
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
         <Property name="text" type="java.lang.String" value="1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jBtnMentes">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ment&#xe9;s"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jBtnBetoltes">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Bet&#xf6;lt&#xe9;s"/>
       </Properties>
     </Component>
   </SubComponents>

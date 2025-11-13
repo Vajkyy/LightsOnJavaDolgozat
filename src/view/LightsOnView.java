@@ -33,6 +33,8 @@ public class LightsOnView extends javax.swing.JFrame {
         jBtnUjra = new javax.swing.JButton();
         jLblFelkapcs = new javax.swing.JLabel();
         jTxtFelkapcsLampa = new javax.swing.JTextField();
+        jBtnMentes = new javax.swing.JButton();
+        jBtnBetoltes = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMnuBar = new javax.swing.JMenu();
         jMnuItemJatekSzabaly = new javax.swing.JMenuItem();
@@ -81,6 +83,10 @@ public class LightsOnView extends javax.swing.JFrame {
         jTxtFelkapcsLampa.setEditable(false);
         jTxtFelkapcsLampa.setText("1");
 
+        jBtnMentes.setText("Mentés");
+
+        jBtnBetoltes.setText("Betöltés");
+
         jMnuBar.setText("Menü");
 
         jMnuItemJatekSzabaly.setText("Játékszabályzat...");
@@ -100,13 +106,17 @@ public class LightsOnView extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLblFelkapcs)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTxtFelkapcsLampa, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jBtnUjra, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jBtnBetoltes, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jBtnMentes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jBtnUjra, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -119,44 +129,17 @@ public class LightsOnView extends javax.swing.JFrame {
                     .addComponent(jBtnUjra)
                     .addComponent(jLblFelkapcs)
                     .addComponent(jTxtFelkapcsLampa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jBtnMentes)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jBtnBetoltes)
+                .addContainerGap(7, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LightsOnView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LightsOnView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LightsOnView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LightsOnView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new LightsOnView().setVisible(true);
-            }
-        });
-    }
 
     public JButton getjBtnGame0() {
         return jBtnGame0;
@@ -205,10 +188,23 @@ public class LightsOnView extends javax.swing.JFrame {
     public JTextField getjTxtFelkapcsLampa() {
         return jTxtFelkapcsLampa;
     }
+
+    public JButton getjBtnBetoltes() {
+        return jBtnBetoltes;
+    }
+
+    public JButton getjBtnGame7() {
+        return jBtnGame7;
+    }
+
+    public JButton getjBtnMentes() {
+        return jBtnMentes;
+    }
     
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBtnBetoltes;
     private javax.swing.JButton jBtnGame0;
     private javax.swing.JButton jBtnGame1;
     private javax.swing.JButton jBtnGame2;
@@ -218,6 +214,7 @@ public class LightsOnView extends javax.swing.JFrame {
     private javax.swing.JButton jBtnGame6;
     private javax.swing.JButton jBtnGame7;
     private javax.swing.JButton jBtnGame8;
+    private javax.swing.JButton jBtnMentes;
     private javax.swing.JButton jBtnUjra;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLblFelkapcs;
