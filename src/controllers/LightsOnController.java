@@ -17,6 +17,12 @@ public class LightsOnController {
     private int nFelkapcsSzam;
 
     public LightsOnController(LightsOnView nNezet, LightsOnModel nModel) {
+        if (nNezet == null) {
+            throw new NullPointerException("A nézet (LightsOnView) nem lehet null.");
+        }
+        if (nModel == null) {
+            throw new NullPointerException("A modell (LightsOnModel) nem lehet null.");
+        }
         this.nNezet = nNezet;
         this.nModel = nModel;
         bellit();
@@ -34,6 +40,9 @@ public class LightsOnController {
         nGombok[8] = nNezet.getjBtnGame8();
 
         for (int i = 0; i < nGombok.length; i++) {
+            if (nGombok[i] == null) {
+                throw new NullPointerException("A(z) " + i + ". gomb nincs inicializálva.");
+            }
             nGombok[i].setBackground(nModel.getSzin(i));
         }
 
@@ -56,6 +65,7 @@ public class LightsOnController {
                 ujraindit();
             }
         });
+
         nNezet.getjMnuItemKilepes().addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 kilepesMegerosites();
@@ -70,19 +80,21 @@ public class LightsOnController {
                         + "Felkapcsolt: zöld\nKikapcsolt: sárga");
             }
         });
+
         nNezet.addWindowListener(new java.awt.event.WindowAdapter() {
             @Override
             public void windowClosing(java.awt.event.WindowEvent e) {
                 kilepesMegerosites();
             }
         });
+
         nNezet.getjBtnMentes().addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 try {
                     nModel.ment("lightsOnMentes.txt");
                     JOptionPane.showMessageDialog(null, "Játékállás mentve!");
                 } catch (IOException ex) {
-                    JOptionPane.showMessageDialog(null, "Hiba a mentés során: " + ex.getMessage());
+                    throw new RuntimeException("Hiba a mentés során: " + ex.getMessage());
                 }
             }
         });
@@ -98,14 +110,16 @@ public class LightsOnController {
                     JOptionPane.showMessageDialog(null, "Játékállás betöltve!");
                     ellenorizGyozelem();
                 } catch (IOException ex) {
-                    JOptionPane.showMessageDialog(null, "Hiba a betöltés során: " + ex.getMessage());
+                    throw new RuntimeException("Hiba a betöltés során: " + ex.getMessage());
                 }
             }
         });
-
     }
 
     private void kapcsol(int nPozicio) {
+        if (nPozicio < 0 || nPozicio >= nGombok.length) {
+            throw new IndexOutOfBoundsException("Hibás pozíció a kapcsol metódusban: " + nPozicio);
+        }
         nModel.kapcsol(nPozicio);
         for (int i = 0; i < nGombok.length; i++) {
             nGombok[i].setBackground(nModel.getSzin(i));
@@ -115,6 +129,9 @@ public class LightsOnController {
     private void frissitFelkapcsSzam() {
         nFelkapcsSzam = 0;
         for (int i = 0; i < nGombok.length; i++) {
+            if (nGombok[i] == null) {
+                throw new NullPointerException("Null referencia a frissitFelkapcsSzam metódusban a(z) " + i + ". gombnál.");
+            }
             if (nGombok[i].getBackground().equals(Color.GREEN)) {
                 nFelkapcsSzam++;
             }
@@ -125,6 +142,9 @@ public class LightsOnController {
     private int kezdetiSzamolas() {
         int nSzamlalo = 0;
         for (int i = 0; i < nGombok.length; i++) {
+            if (nGombok[i] == null) {
+                throw new NullPointerException("Null referencia a kezdetiSzamolas metódusban a(z) " + i + ". gombnál.");
+            }
             if (nGombok[i].getBackground().equals(Color.GREEN)) {
                 nSzamlalo++;
             }
@@ -154,7 +174,6 @@ public class LightsOnController {
                 JOptionPane.YES_NO_OPTION,
                 JOptionPane.QUESTION_MESSAGE
         );
-
         if (valasz == JOptionPane.YES_OPTION) {
             System.exit(0);
         }
