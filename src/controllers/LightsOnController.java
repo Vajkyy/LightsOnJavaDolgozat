@@ -3,6 +3,7 @@ package controllers;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import models.LightsOnModel;
@@ -75,6 +76,32 @@ public class LightsOnController {
                 kilepesMegerosites();
             }
         });
+        nNezet.getjBtnMentes().addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    nModel.ment("lightsOnMentes.txt");
+                    JOptionPane.showMessageDialog(null, "Játékállás mentve!");
+                } catch (IOException ex) {
+                    JOptionPane.showMessageDialog(null, "Hiba a mentés során: " + ex.getMessage());
+                }
+            }
+        });
+
+        nNezet.getjBtnBetoltes().addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    nModel.betolt("lightsOnMentes.txt");
+                    for (int i = 0; i < nGombok.length; i++) {
+                        nGombok[i].setBackground(nModel.getSzin(i));
+                    }
+                    frissitFelkapcsSzam();
+                    JOptionPane.showMessageDialog(null, "Játékállás betöltve!");
+                    ellenorizGyozelem();
+                } catch (IOException ex) {
+                    JOptionPane.showMessageDialog(null, "Hiba a betöltés során: " + ex.getMessage());
+                }
+            }
+        });
 
     }
 
@@ -114,8 +141,8 @@ public class LightsOnController {
     }
 
     private void ellenorizGyozelem() {
-        if (nModel.mindenSarga()) {
-            JOptionPane.showMessageDialog(null, "Gratulálok! Minden lámpa lekapcsolva!");
+        if (nModel.mindenZold()) {
+            JOptionPane.showMessageDialog(null, "Gratulálok! Minden lámpa felkapcsolva!");
         }
     }
 

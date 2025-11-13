@@ -1,3 +1,0 @@
-gombok listába
-kiindulási alap random, maximum 3 lámpa égjen
-
